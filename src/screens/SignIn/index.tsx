@@ -2,6 +2,7 @@ import React from 'react';
 import { Layout, Button, Input } from '@ui-kitten/components';
 import { useNavigation } from '@react-navigation/native';
 import { useForm, Controller } from 'react-hook-form';
+import { Image } from 'react-native';
 import { Styles } from './styles';
 
 type User = {
@@ -23,6 +24,8 @@ const SignIn: React.FC = () => {
 
   return (
     <Layout style={Styles.container}>
+      <Image source={require('../../assets/icon.png')} />
+
       <Controller
         control={control}
         defaultValue=""
